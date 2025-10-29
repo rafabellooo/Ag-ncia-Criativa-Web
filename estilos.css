@@ -1,10 +1,18 @@
+/* =============================== */
+/* 01. VARIÁVEIS GLOBAIS           */
+/* =============================== */
 :root {
   --cor-primaria: #1e90ff;
   --cor-secundaria: #f4f4f4;
   --cor-texto: #333;
   --fonte-principal: 'Poppins', sans-serif;
+  --border-radius: 0.5rem;
+  --transition: 0.3s;
 }
 
+/* =============================== */
+/* 02. RESET / GLOBAL              */
+/* =============================== */
 * {
   margin: 0;
   padding: 0;
@@ -14,112 +22,134 @@
 body {
   font-family: var(--fonte-principal);
   color: var(--cor-texto);
-  background-color: white;
+  background-color: #fff;
   line-height: 1.6;
 }
 
-/* Cabeçalho */
-.cabecalho {
+/* =============================== */
+/* 03. LAYOUT                      */
+/* =============================== */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
   background: var(--cor-primaria);
-  color: white;
+  color: #fff;
   position: relative;
+  flex-wrap: wrap; /* facilita responsividade */
 }
 
-.logo {
+.header__logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Menu Desktop */
-.menu ul {
+.nav {
+  display: flex;
+}
+
+.nav__list {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
 
-.menu a {
-  color: white;
+.nav__link {
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.3s;
+  transition: opacity var(--transition);
 }
 
-.menu a:hover {
+.nav__link:hover {
   opacity: 0.7;
 }
 
-/* Botão hambúrguer (escondido no desktop) */
-.menu-toggle {
+.nav-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Home */
+/* =============================== */
+/* 04. HOME SECTION                */
+/* =============================== */
 .home {
-  background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80')
+  background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80') 
     no-repeat center/cover;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 12vh 2rem;
 }
 
-.home h1 {
+.home__title {
   font-size: clamp(1.8rem, 5vw, 3rem);
 }
 
-.home p {
+.home__subtitle {
   font-size: 1.2rem;
   margin: 1rem 0;
 }
 
+/* =============================== */
+/* 05. COMPONENTES REUTILIZÁVEIS   */
+/* =============================== */
 .btn {
   display: inline-block;
   background: var(--cor-primaria);
-  color: white;
+  color: #fff;
   padding: 0.8rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
+  transition: opacity var(--transition);
 }
 
-/* Seções */
-section {
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* =============================== */
+/* 06. SECTIONS                     */
+/* =============================== */
+.section {
   padding: 4rem 5%;
   text-align: center;
 }
 
-.sobre p {
+.section__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.about__text {
   max-width: 700px;
   margin: 1rem auto;
   font-size: 1.1rem;
 }
 
-/* Serviços */
-.grid-servicos {
+.services__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.servico {
+.services__item {
   background: var(--cor-secundaria);
   padding: 2rem;
   border-radius: 1rem;
-  transition: transform 0.3s;
+  transition: transform var(--transition);
+  text-align: center;
 }
 
-.servico:hover {
+.services__item:hover {
   transform: scale(1.05);
 }
 
-/* Depoimentos */
-.flex-depoimentos {
+.testimonials__flex {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -127,20 +157,20 @@ section {
   margin-top: 2rem;
 }
 
-blockquote {
+.testimonial {
   background: var(--cor-secundaria);
   padding: 2rem;
   border-radius: 1rem;
   max-width: 400px;
   font-style: italic;
+  text-align: center;
 }
 
-/* Contato */
-.info-contato {
+.contact__info {
   margin-bottom: 2rem;
 }
 
-.form-contato {
+.contact__form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -148,37 +178,40 @@ blockquote {
   margin: 0 auto;
 }
 
-.form-contato input,
-.form-contato textarea {
+.contact__input,
+.contact__textarea {
   padding: 1rem;
   border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   font-size: 1rem;
   width: 100%;
 }
 
-.form-contato button {
+.contact__button {
   background: var(--cor-primaria);
-  color: white;
+  color: #fff;
   padding: 1rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   cursor: pointer;
   font-weight: bold;
 }
 
-/* Rodapé */
-.rodape {
+.footer {
   background: var(--cor-primaria);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* =============================== */
+/* 07. RESPONSIVIDADE               */
+/* =============================== */
+
+/* Tablet / telas médias */
 @media (max-width: 900px) {
-  .menu ul {
+  .nav__list {
     display: none;
     flex-direction: column;
     background: var(--cor-primaria);
@@ -190,21 +223,30 @@ blockquote {
     padding: 1rem 0;
   }
 
-  .menu ul.ativo {
+  .nav__list.nav__list--active {
     display: flex;
   }
 
-  .menu-toggle {
+  .nav-toggle {
     display: block;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .testimonials__flex {
+    flex-direction: column;
   }
 }
 
+/* Mobile / telas pequenas */
 @media (max-width: 600px) {
-  .home h1 {
+  .home__title {
     font-size: 1.8rem;
   }
 
-  .home p {
+  .home__subtitle {
     font-size: 1rem;
   }
 
@@ -213,7 +255,19 @@ blockquote {
     font-size: 0.9rem;
   }
 
-  .cabecalho {
+  .header {
     flex-wrap: wrap;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial {
+    max-width: 100%;
+  }
+
+  .contact__form {
+    padding: 0 1rem;
   }
 }
