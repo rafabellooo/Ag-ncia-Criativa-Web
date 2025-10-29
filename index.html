@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência Criativa Web</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="logo">Agência Criativa Web</div>
+
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="home">
+    <div class="banner">
+      <h1>Transformamos Ideias em Experiências Digitais</h1>
+      <p>Soluções criativas e modernas para o seu negócio.</p>
+      <a href="#contato" class="btn">Fale Conosco</a>
+    </div>
+  </section>
+
+  <!-- Sobre Nós -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      A Agência Criativa Web é especializada em design digital e desenvolvimento web.
+      Acreditamos no poder da criatividade para conectar marcas e pessoas.
+    </p>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="servicos">
+    <h2>Serviços</h2>
+    <div class="grid-servicos">
+      <div class="servico">
+        <h3>Design Gráfico</h3>
+        <p>Criação de identidades visuais, logotipos e materiais gráficos.</p>
+      </div>
+      <div class="servico">
+        <h3>Desenvolvimento Web</h3>
+        <p>Sites modernos, responsivos e otimizados para performance.</p>
+      </div>
+      <div class="servico">
+        <h3>Branding</h3>
+        <p>Estratégias para posicionar sua marca com força no mercado.</p>
+      </div>
+      <div class="servico">
+        <h3>Marketing Digital</h3>
+        <p>Campanhas criativas para aumentar sua presença online.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="flex-depoimentos">
+      <blockquote>
+        “A Agência Criativa Web elevou o nível da nossa marca. Trabalho impecável!”
+        <cite>– João Silva, CEO da TechHouse</cite>
+      </blockquote>
+      <blockquote>
+        “Equipe extremamente profissional e criativa. Recomendo de olhos fechados!”
+        <cite>– Maria Oliveira, Fundadora da ModaFit</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <div class="info-contato">
+      <p>📍 Rua das Inovações, 123 – São Paulo, SP</p>
+      <p>📞 (11) 98765-4321</p>
+      <p>✉️ contato@agenciacriativaweb.com</p>
+    </div>
+
+    <form class="form-contato">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="rodape">
+    <p>© 2025 Agência Criativa Web. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Script para abrir/fechar menu mobile
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('ativo');
+    });
+  </script>
+</body>
+</html>
