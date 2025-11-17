@@ -1,0 +1,28 @@
+@use 'variaveis';
+
+.cabecalho {
+  background: variaveis.$cor-primaria;
+  color: white;
+  padding: variaveis.$espacamento-padrao;
+
+  &__titulo {
+    text-align: center;
+  }
+}
+
+.conteudo {
+  padding: variaveis.$espacamento-padrao;
+
+  &__paragrafo {
+    font-size: 18px;
+  }
+
+  &__link {
+    color: variaveis.$cor-primaria;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

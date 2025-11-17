@@ -1,100 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agência Criativa Web</title>
-  <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo SAAS</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Meu site</h1>
+    </header>
+    <section class="conteudo">
+        <p class="conteudo__paragrafo">Bem-vindo ao site, aproveite o conteúdo.</p>
+        <a href="#" class="conteudo__link">Saiba mais</a>
+    </section>
 
-  <!-- ================= HEADER ================= -->
-  <header class="header">
-    <div class="header__logo">Agência</div>
-
-    <nav class="nav">
-      <ul class="nav__list">
-        <li><a class="nav__link" href="#home">Home</a></li>
-        <li><a class="nav__link" href="#sobre">Sobre</a></li>
-        <li><a class="nav__link" href="#servicos">Serviços</a></li>
-        <li><a class="nav__link" href="#depoimentos">Depoimentos</a></li>
-        <li><a class="nav__link" href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
-    <div class="nav-toggle">☰</div>
-  </header>
-
-  <!-- ================= HOME ================= -->
-  <section id="home" class="home section">
-    <h1 class="home__title">Bem-vindo à Agência Criativa Web</h1>
-    <p class="home__subtitle">Transformamos suas ideias em projetos digitais de sucesso.</p>
-    <a href="#contato" class="btn">Entre em Contato</a>
-  </section>
-
-  <!-- ================= SOBRE ================= -->
-  <section id="sobre" class="about section">
-    <h2 class="section__title">Sobre Nós</h2>
-    <p class="about__text">
-      Somos uma equipe de designers e desenvolvedores apaixonados por criar soluções digitais criativas, modernas e responsivas para nossos clientes.
-    </p>
-  </section>
-
-  <!-- ================= SERVIÇOS ================= -->
-  <section id="servicos" class="services section">
-    <h2 class="section__title">Nossos Serviços</h2>
-    <div class="services__grid">
-      <div class="services__item">Design Web</div>
-      <div class="services__item">Desenvolvimento Front-End</div>
-      <div class="services__item">Marketing Digital</div>
-      <div class="services__item">Consultoria de UX/UI</div>
-    </div>
-  </section>
-
-  <!-- ================= DEPOIMENTOS ================= -->
-  <section id="depoimentos" class="testimonials section">
-    <h2 class="section__title">Depoimentos</h2>
-    <div class="testimonials__flex">
-      <blockquote class="testimonial">
-        “Excelente serviço! Nossa empresa cresceu muito com o suporte da agência.”
-      </blockquote>
-      <blockquote class="testimonial">
-        “Profissionais dedicados e criativos. Super recomendo!”
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ================= CONTATO ================= -->
-  <section id="contato" class="contact section">
-    <h2 class="section__title">Entre em Contato</h2>
-
-    <div class="contact__info">
-      <p>Email: contato@agenciacriativa.com</p>
-      <p>Telefone: (11) 1234-5678</p>
-    </div>
-
-    <form class="contact__form">
-      <input type="text" class="contact__input" placeholder="Seu Nome" required>
-      <input type="email" class="contact__input" placeholder="Seu Email" required>
-      <textarea class="contact__textarea" rows="5" placeholder="Sua Mensagem" required></textarea>
-      <button type="submit" class="contact__button">Enviar Mensagem</button>
-    </form>
-  </section>
-
-  <!-- ================= RODAPÉ ================= -->
-  <footer class="footer">
-    &copy; 2025 Agência Criativa Web. Todos os direitos reservados.
-  </footer>
-
-  <!-- ================= JS MENU HAMBURGUER ================= -->
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const navList = document.querySelector('.nav__list');
-
-    navToggle.addEventListener('click', () => {
-      navList.classList.toggle('nav__list--active');
-    });
-  </script>
-
+<footer>Todos os direitos reservados.</footer> 
 </body>
 </html>
+
